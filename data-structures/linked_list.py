@@ -6,14 +6,30 @@ class Node:
 class SLinkedList:
     def __init__(self):
         self.headval = None
+    
+    def print_list(self):
+        printval = self.headval
+        while printval is not None:
+            print(printval.dataval)
+            printval = printval.nextval
+    
+    def addBegining(self, newData):
+        NewNode = Node(newData)
+        #Update the new nodes next val to existing node
+        NewNode.nextval = self.headval
+        self.headval = NewNode
 
 list1 = SLinkedList()
 list1.headval = Node("Monday")
 e2 = Node("Tuesday")
 e3 = Node("Wednesday")
 
-# Link first Node to second Node
 list1.headval.nextval = e2
-
-# Link second Node to third node
 e2.nextval = e3
+
+list1.print_list()
+
+list1.addBegining("Sunday")
+print("-----")
+
+list1.print_list()
