@@ -25,5 +25,5 @@ def merge(left_half,right_half):
     return result
 
 
-unsorted_list = [11, 19, 12, 1, 5]
+unsorted_list = [11, 19, 12, 1, 5, 100, 6, 7, 24]
 print(merge_sort(unsorted_list))
