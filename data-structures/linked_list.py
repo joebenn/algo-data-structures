@@ -57,4 +57,3 @@ print("------")
 list1.addBetween(list1.headval, "Friday")
 
 list1.print_list()
-
