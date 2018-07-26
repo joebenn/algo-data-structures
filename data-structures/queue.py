@@ -26,6 +26,7 @@ q = Queue()
 q.enqueue("dog")
 q.enqueue("cat")
 q.enqueue("rabbit")
+q.enqueue(90)
 
 print(q.size())
 print(q.peek())
