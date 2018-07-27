@@ -37,11 +37,27 @@ class Graph(object):
             result += str(edge) + " "
         return result
 
+    def find_path(self, start_node, end_node, path=None):
+        if path == None:
+            path = []
+        graph = self.__graph
+        path = path + [start_node]
+        if start_node == end_node:
+            return path
+        if start_node not in graph:
+            return None
+        for node in graph[start_node]:
+            if node not in path:
+                extended_path = self.find_path(node, end_node, path)
+                if extended_path: 
+                    return extended_path
+        return None
+
 graph = { "A": ["B", "C"], "B": ["D", "E"], "C": ["A"], "D": ["B", 'E'], "E": ["B", "D"] }
 
 g = Graph(graph)
 print(g)
 
-g.add_node("F")
-g.add_edge(("C", "F"))
-print(g)
+
+path = g.find_path("A", "E")
+print(path)
