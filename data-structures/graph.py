@@ -58,6 +58,5 @@ graph = { "A": ["B", "C"], "B": ["D", "E"], "C": ["A"], "D": ["B", 'E'], "E": ["
 g = Graph(graph)
 print(g)
 
-
 path = g.find_path("A", "E")
 print(path)
