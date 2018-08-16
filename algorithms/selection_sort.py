@@ -7,7 +7,6 @@ def selection_sort(input_list):
         # Swap the minimum value with the compared value
         input_list[i], input_list[min_index] = input_list[min_index], input_list[i]
 
-
 l = [19,2,31,45,30,11,121,27]
 selection_sort(l)
 print(l)
